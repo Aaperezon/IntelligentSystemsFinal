@@ -79,3 +79,5 @@ for k,v in avg_text_length_and_word_count_per_class.items():
 data_base = GetDataBaseObjectWithWordVector(normalizedLines)
 vocabulary = GetVocabulary(normalizedLines)
 #print(f"vocabulary: {vocabulary}")
+if __name__ == "__main__":
+    print(f"vocabulary: {vocabulary}")
