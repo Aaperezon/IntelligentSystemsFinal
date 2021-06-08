@@ -22,7 +22,7 @@ stop_words = stopwords.words("english")
 
 #read class file and join with english.txt
 
-classes_dict = {tp[0]:tp[2] for tp in pd.read_csv('Gold-Ingles.csv',header=None).to_numpy()}
+classes_dict = {tp[0]:tp[1] for tp in pd.read_csv('Gold-Ingles.csv',header=None).to_numpy()}
 
 only_letters = re.compile('^[a-z]+$')
 
@@ -43,4 +43,4 @@ print('before __name__ == "main"')
 
 if __name__ == "__main__":
     normalizedLines = NormalizeRows()
-    #print(normalizedLines)
+    print(normalizedLines[0])
