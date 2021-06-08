@@ -7,7 +7,6 @@ from random import shuffle
 #change to object (id,language,text,tf_idf) to improve readability and optimize
 
 normalizedLines = NormalizeRows()
-print(normalizedLines[0])
 print(f"Numero de instancias: {len(normalizedLines)}")
 
 

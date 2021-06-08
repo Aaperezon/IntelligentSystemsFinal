@@ -7,7 +7,6 @@ from nltk.corpus import stopwords
 from nltk.stem.wordnet import  WordNetLemmatizer
 
 lmtzr = WordNetLemmatizer()
-print("AFTER LEMMATIZER INSTANCE")
 
 
 file1 = open("English.txt", 'r')
