@@ -79,4 +79,4 @@ for k,v in avg_text_length_and_word_count_per_class.items():
     print(f'class={k} Avg Text Length: {v[0]} Word Count: {v[1]}')
 data_base = GetDataBaseObjectWithWordVector(normalizedLines)
 vocabulary = GetVocabulary(normalizedLines)
-print(f"vocabulary: {vocabulary}")
+#print(f"vocabulary: {vocabulary}")
