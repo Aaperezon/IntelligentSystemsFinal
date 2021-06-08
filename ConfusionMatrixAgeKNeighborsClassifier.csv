@@ -1,4 +1,4 @@
-,10s ,20s,30s
-10s,1,9,18
-20s,14,83,130
-30s,18,88,139
+,10s predicted ,20s predicted,30s predicted
+10s real,2,9,16
+20s real,15,105,151
+30s real,17,60,125

@@ -6,8 +6,9 @@ from random import shuffle
 
 #change to object (id,language,text,tf_idf) to improve readability and optimize
 
-normalizedLines = NormalizeRows()
-print(f"Numero de instancias: {len(normalizedLines)}")
+normalizedLinesAge = NormalizeRows(1)
+normalizedLinesGender = NormalizeRows(2)
+print(f"Numero de instancias: {len(normalizedLinesAge)}")
 
 
 def GetVocabulary(data_base):
@@ -73,11 +74,17 @@ def GetAverageTextLengthAndWordCount(data_base):
             per_class[class_name] = [text_length,1,word_count]
     return {k:(v[0]/v[1],v[2]) for k,v in per_class.items()}
 
-avg_text_length_and_word_count_per_class = GetAverageTextLengthAndWordCount(normalizedLines)
+avg_text_length_and_word_count_per_class = GetAverageTextLengthAndWordCount(normalizedLinesAge)
 for k,v in avg_text_length_and_word_count_per_class.items():
     print(f'class={k} Avg Text Length: {v[0]} Word Count: {v[1]}')
-data_base = GetDataBaseObjectWithWordVector(normalizedLines)
-vocabulary = GetVocabulary(normalizedLines)
+data_base_age = GetDataBaseObjectWithWordVector(normalizedLinesAge)
+vocabulary_age = GetVocabulary(normalizedLinesAge)
+
+avg_text_length_and_word_count_per_class = GetAverageTextLengthAndWordCount(normalizedLinesGender)
+for k,v in avg_text_length_and_word_count_per_class.items():
+    print(f'class={k} Avg Text Length: {v[0]} Word Count: {v[1]}')
+data_base_gender = GetDataBaseObjectWithWordVector(normalizedLinesGender)
+vocabulary_gender = GetVocabulary(normalizedLinesGender)
 #print(f"vocabulary: {vocabulary}")
 if __name__ == "__main__":
-    print(f"vocabulary: {vocabulary}")
+    print(f"vocabulary: {vocabulary_age}")

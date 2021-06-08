@@ -8,28 +8,22 @@ nltk.download('wordnet')
 from nltk.corpus import stopwords,words
 from nltk.stem.wordnet import  WordNetLemmatizer
 #import enchant
-
 #d = enchant.Dict("en_US")
 
 lmtzr = WordNetLemmatizer()
-
 words = words.words()
-
 
 file1 = open("English.txt", 'r')
 Lines = file1.readlines()
 stop_words = stopwords.words("english")
-
-#read class file and join with english.txt
-
-classes_dict = {tp[0]:tp[1] for tp in pd.read_csv('Gold-Ingles.csv',header=None).to_numpy()}
 
 only_letters = re.compile('^[a-z]+$')
 
 def link(word):
     return 'http' in word or 'www' in word
 
-def NormalizeRows():
+def NormalizeRows(row):
+    classes_dict = {tp[0]:tp[row] for tp in pd.read_csv('Gold-Ingles.csv',header=None).to_numpy()}    
     normalizedLines = []
     for line in Lines:
         line = line.split("\t")
@@ -39,7 +33,6 @@ def NormalizeRows():
 
     return normalizedLines
 
-print('before __name__ == "main"')
 
 if __name__ == "__main__":
     normalizedLines = NormalizeRows()
