@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 , female predicted ,male predicted
 female real,99,56
 male real  ,165,180
+=======
+,10s predicted,20s predicted,30s predicted
+10s real,2,38,41
+20s real,12,93,123
+30s real,11,65,115
+>>>>>>> 5ef87a8ada9e2e409bb90ac30c2db587f9448683

@@ -1,3 +1,4 @@
-, female predicted ,male predicted
-female real,182,144
-male real  ,82,92
+,10s predicted,20s predicted,30s predicted
+10s real,0,1,4
+20s real,3,76,56
+30s real,22,119,219
