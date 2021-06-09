@@ -87,4 +87,4 @@ data_base_gender = GetDataBaseObjectWithWordVector(normalizedLinesGender)
 vocabulary_gender = GetVocabulary(normalizedLinesGender)
 #print(f"vocabulary: {vocabulary}")
 if __name__ == "__main__":
-    print(f"vocabulary: {vocabulary_age}")
+    print(f"vocabulary: {len(vocabulary_age)}")
